@@ -96,9 +96,9 @@
         /**
          * Aufgabe 6
          */
-        function calculateDistance() {
-            // TODO: Diese Funktion muss (inklusive Funktionsparameter) implementiert werden. 
-            // Orientiere dich an der Funktion aus Aufgabe 5.
+        function calculateDistance(speed, duration, elementId) {
+            let distance = speed * duration; // TODO: Diese Funktion muss (inklusive Funktionsparameter) implementiert werden. 
+            document.getElementById(elementId).innerText = `${distance} km`; // Orientiere dich an der Funktion aus Aufgabe 5.
         }
     </script>
 </head>
@@ -164,14 +164,14 @@
             <td>2.</td>
             <td>2² + 5²</td>
             <td id="result2"></td>
-            <td></td>
+            <td><button onclick="pythagoras(2,5, 'result2')">Berechnen</button></td>
         </tr>
 
 
         <tr>
             <td>3.</td>
             <td>3² + 2²</td>
-            <td></td>
+            <td id="result3"></td>
             <td><button onclick="pythagoras(3, 2, 'result3')">Berechnen</button></td>
         </tr>
     </table>
@@ -197,7 +197,7 @@
             <td>5 km/h</td>
             <td>24 Stunden</td>
             <td id="distance1"></td>
-            <td><button onclick="calculateDistance('Hier Parameter einfügen')">Berechnen</button></td>
+            <td><button onclick="calculateDistance(5, 24, 'distance1')">Berechnen</button></td>
         </tr>
 
         <tr>
@@ -205,7 +205,7 @@
             <td>12 km/h</td>
             <td>24 Stunden</td>
             <td id="distance2"></td>
-            <td><button onclick="calculateDistance('Hier Parameter einfügen')">Berechnen</button></td>
+            <td><button onclick="calculateDistance(12, 24, 'distance2')">Berechnen</button></td>
         </tr>
 
         <tr>
@@ -213,7 +213,7 @@
             <td>18 km/h</td>
             <td>24 Stunden</td>
             <td id="distance3"></td>
-            <td><button onclick="calculateDistance('Hier Parameter einfügen')">Berechnen</button></td>
+            <td><button onclick="calculateDistance(18, 24, 'distance3')">Berechnen</button></td>
         </tr>
 
         <tr>
@@ -221,7 +221,7 @@
             <td>100 km/h</td>
             <td>24 Stunden</td>
             <td id="distance4"></td>
-            <td><button onclick="calculateDistance('Hier Parameter einfügen')">Berechnen</button></td>
+            <td><button onclick="calculateDistance(100, 24, 'distance4')">Berechnen</button></td>
         </tr>
 
 
@@ -230,7 +230,7 @@
             <td>800 km/h</td>
             <td>24 Stunden</td>
             <td id="distance5"></td>
-            <td><button onclick="calculateDistance('Hier Parameter einfügen')">Berechnen</button></td>
+            <td><button onclick="calculateDistance(800, 24, 'distance5')">Berechnen</button></td>
         </tr>
 
         <tr>
@@ -238,7 +238,7 @@
             <td>28800 km/h</td>
             <td>24 Stunden</td>
             <td id="distance6"></td>
-            <td><button onclick="calculateDistance('Hier Parameter einfügen')">Berechnen</button></td>
+            <td><button onclick="calculateDistance(28800, 24, 'distance6')">Berechnen</button></td>
         </tr>
     </table>
 </body>
