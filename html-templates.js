@@ -70,12 +70,28 @@ function setName(n) {
  * Aufgabe 5 
  */
 function sendMessage() {
-    let message = document.getElementById('message'); // HTML Element mit ID message wird an die Variable 'message' zugewiesen. 
+    let userName = document.getElementById('name');
+    let message = document.getElementById('message'); // HTML Element mit ID message wird an die Variable 'message' zugewiesen.
     let chat = document.getElementById('chat');
 
+    if (message.value.length == 0) {
+        alert("Bitte ausfüllen!");
+        return;
+    }
+
+    //kurzform:
+    // if (!message.value) {
+    //     alert("Bitte ausfüllen!");
+    //     return;
+    // }
+
     chat.innerHTML += `
-            <div><i>Unbekannt</i>: ${message.value}</div>
+            <div><i>${userName.value}:</i> ${message.value}</div>
             `;
 
     message.value = ''; // Inhalt von Textfeld mit id "message" löschen
+    userName.value = '';    // Inhalt von Textfeld mit id "userName" löschen
+
+
 }
+
