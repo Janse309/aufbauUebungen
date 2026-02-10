@@ -47,10 +47,11 @@ function deleteFruits() {
 /**
  * Aufgabe 3 
  */
-function generatedCircle() {
+
+function generatedCircle(name) {
     document.getElementById('generatedHTML').innerHTML = `
             <div class="circle">
-                Kreis    
+                <b> ${name}</b>    
             </div>
             `;
 }
@@ -59,7 +60,8 @@ function generatedCircle() {
  * Aufgabe 4 (Hilfsfunktion um den Namen zu ändern) 
  */
 function setName(n) {
-    name = n;
+    let name = n;
+    generatedCircle(name);
 }
 
 
@@ -72,7 +74,7 @@ function sendMessage() {
     let chat = document.getElementById('chat');
 
     chat.innerHTML += `
-            <div>Unbekannt: ${message.value}</div>
+            <div><i>Unbekannt</i>: ${message.value}</div>
             `;
 
     message.value = ''; // Inhalt von Textfeld mit id "message" löschen

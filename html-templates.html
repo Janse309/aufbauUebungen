@@ -25,10 +25,8 @@
     <button onclick="joke2()">Witz 2</button>
     <button onclick="joke3()">Witz 3</button>
     <button onclick="joke4()">Witz 4</button>
-
-
-
     <div id="joke"></div>
+
 
 
     <p>
@@ -40,6 +38,10 @@
         Funktion? Wie funktioniert sie? <!--  -->
 
         <br> 2.3. Erkläre den Unterschied von <code>=</code> und <code>+=</code>
+        <!-- = ist der Zuweisungsoperator. Wenn ich ihn hier verwenden würde würde der alte Text
+         verschwinden wenn ich einen anderen Button drücke. += ist der Addition-Zuweisungs Operator er fügt die
+         Früchte hinzu und listet sie untereinander. Der Unterschied liegt also darin das der Zuweisungsoperator
+         den Text überschreibt und der Addition-Zuweisungsoperator den neuen Text hinzufügt.  -->
         <br> 2.4. Stelle die Früchte in der Liste fett dar. Bearbeite die Funktion <code>addFruit(fruit)</code> so, dass
         jede Frucht in dem generierten HTML Code mit einem <code>&lt;b&gt;&lt;/b&gt;</code> umgeben ist.
     </p>
@@ -79,6 +81,7 @@
 
     <button onclick="setName('Franz')">Franz</button>
     <button onclick="setName('Gundula')">Gundula</button>
+    <button onclick="setName('Henriette')">Henriette</button>
 
 
     <p>
@@ -98,6 +101,7 @@
             Textfeld geschrieben wurde.</i>
     </p>
 
+    <input type="text">
     <input type="text" id="message" placeholder="Nachricht eingeben..."> <button onclick="sendMessage()">Senden</button>
     <div id="chat">
 
