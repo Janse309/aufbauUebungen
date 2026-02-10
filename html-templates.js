@@ -31,11 +31,12 @@ function joke4() {
         `Ich habe ein Ognir-Problem – das ist wie ein Ingo-Problem, nur ohne Logik.`
 }
 
+
 /**
  * Aufgabe 2 
  */
 function addFruit(fruit) {
-    document.getElementById('food').innerHTML += `Frucht hinzugefügt: ${fruit} <br>`;
+    document.getElementById('food').innerHTML += `Frucht hinzugefügt: <b>${fruit}</b> <br>`;
 }
 
 function deleteFruits() {
